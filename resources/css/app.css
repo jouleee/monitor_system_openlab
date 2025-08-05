@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-bg: #FCFCFD;
+    --light-blue: #4DA2D9;
+    --medium-blue: #1E7CD7;
+    --dark-blue: #0068CA;
+    --navy: #263997;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-blue-800 border-2 border-blue-400 font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-400 hover:text-white;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-4 py-2 rounded-full font-semibold text-sm shadow-md;
+  }
+  
+  .status-kosong {
+    @apply bg-green-500 text-white;
+  }
+  
+  .status-terisi {
+    @apply bg-red-500 text-white;
+  }
+  
+  .status-hampir-selesai {
+    @apply bg-yellow-400 text-gray-900;
+  }
+}
